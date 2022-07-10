@@ -1,7 +1,7 @@
 {
-  "name": "projektasapp",
+  "name": "back",
   "version": "1.0.0",
-  "description": "mano projektas",
+  "description": "projektas",
   "main": "./back/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
