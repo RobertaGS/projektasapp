@@ -13,8 +13,20 @@ const getTransactions = async()=>{
         console.error(error);
      }
 }
+//post transactions
+const postTransactions = async(Transactions)=>{
+    try {
+        const responce = await axios.post(API_URL, Transactions);
+        //console.log(responce);
+        return(responce);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 const transactionServices = {
     getTransactions,
+    postTransactions
 }
 
 export default transactionServices

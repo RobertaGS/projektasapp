@@ -25,4 +25,7 @@ const setTransactions = asyncHandler(async (req, res) => {
 });
 
 
-module.exports = {getTransactions, setTransactions}
+module.exports = {
+    getTransactions, 
+    setTransactions
+}
