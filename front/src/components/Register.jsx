@@ -28,10 +28,10 @@ const Register = () => {
         }
   return (
     <div className='mainPage'>
-        <h1 className='text-center my-3'>Registration</h1>
+        <h1 className='text-center my-3 text-bg-primary'>Registration</h1>
             <Form onSubmit={onSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>userName</Form.Label>
+                    <Form.Label>User name</Form.Label>
                     <Form.Control type="text" placeholder="Enter Username" 
                     name='text'
                     value={userName}

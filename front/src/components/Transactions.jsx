@@ -22,7 +22,7 @@ console.log(Transactions);
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>#</th>
                             <th>Transaction</th>
                             <th>Amount</th>
                         </tr>     
@@ -30,7 +30,7 @@ console.log(Transactions);
                     <tbody>
                     {Transactions.map((Transactions, index)=> (
                         <tr key={index}>
-                            <td>{Transactions._id}</td>
+                            <td>{}</td>
                             <td>{Transactions.text}</td>
                             <td>{Transactions.amount}</td>
 

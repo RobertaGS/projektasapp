@@ -5,8 +5,11 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <div>
-      <h1>Mano App</h1>
+    <div className='container'>
+      <h1 className='title'>Mano App</h1>
+      
+      
+      
       <Main/>
      
 
