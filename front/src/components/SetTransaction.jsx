@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import transactionServices from '../services/transactionServices';
-import { Form, Button } from 'react-Bootstrap';
+import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
+
 
 const SetTransaction = ({getData}) => {
     const [text, setText] = useState('');
@@ -42,13 +44,12 @@ const SetTransaction = ({getData}) => {
                           value={amount}
                           onChange={(e)=> setAmount(e.target.value)}/>
             </Form.Group>
-            <Button variant="secondary" type="submit">
+            <Button variant="primary" type="submit">
                 Save
             </Button>
         </Form>
       </div>
-    
-        
+   
   )
   }
 

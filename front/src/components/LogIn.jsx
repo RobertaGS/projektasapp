@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import userServices from '../services/userServices';
-import { Form, Button } from 'react-Bootstrap';
+import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
+
 
 const LogIn = () => {
     const [email, setEmail] = useState('');
