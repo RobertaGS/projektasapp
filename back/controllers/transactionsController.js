@@ -1,4 +1,5 @@
 const Transaction = require('../models/Transaction');
+const User = require('../models/User');
 const asyncHandler = require('express-async-Handler');
 //@desc Get transactions
 //@route GET /api/transactions
@@ -16,12 +17,12 @@ const setTransactions = asyncHandler(async (req, res) => {
         throw new Error("Please add a text field");
     }
     
-    const Transaction = await Transaction.create({
+    const transactions = await Transaction.create({
         text: req.body.text,
         amount: req.body.amount,
         user: req.body.user
     })
-    res.status(200).json(Transaction);
+    res.status(200).json(transactions);
 });
 
 

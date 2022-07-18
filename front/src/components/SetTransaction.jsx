@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import transactionServices from '../services/transactionServices';
+import transactionsService from '../services/transactionsService';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 
@@ -12,12 +12,12 @@ const SetTransaction = ({getData}) => {
     const onSubmit = e =>{
         e.preventDefault();
 
-        const SetTransaction = {
+        const setTransaction = {
             text: text,
             amount: amount,
             user: '62c3d7b76b6adfd4956bd756'
         }
-        transactionServices.postTransactions(SetTransaction);
+        transactionsService.postTransactions(setTransaction);
 
         setText('');
         setAmount('');

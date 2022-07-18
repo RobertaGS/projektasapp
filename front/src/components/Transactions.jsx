@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import transactionServices from '../services/transactionServices';
+import transactionsService from '../services/transactionsService';
 import { Table } from 'react-bootstrap';
 
 
 const Transactions = ()=> {
-    const [Transactions, setTransactions] = useState([]);
+    const [transactions, setTransactions] = useState([]);
 
     const getData = ()=> {
-        transactionServices.getTransactions().then(res=>{
+        transactionsService.getTransactions().then(res=>{
             setTransactions([...res.data]);
         })
     }
     useEffect(()=>{
         getData();
     }, []);
-console.log(Transactions);
+console.log(transactions);
     return (
          <div>
-            <h1 className ='text-center my-3'>Transactions</h1>
-            {Transactions.length> 0 ? (
+            <h1 className ='text-center my-3'>Transaction</h1>
+            {transactions.length> 0 ? (
                 <Table striped bordered hover size="sm">
                     <thead>
                         <tr>
@@ -28,11 +28,11 @@ console.log(Transactions);
                         </tr>     
                     </thead>
                     <tbody>
-                    {Transactions.map((Transactions, index)=> (
+                    {transactions.map((transaction, index)=> (
                         <tr key={index}>
                             <td>{}</td>
-                            <td>{Transactions.text}</td>
-                            <td>{Transactions.amount}</td>
+                            <td>{transaction.text}</td>
+                            <td>{transaction.amount}</td>
 
                         </tr>))}
                     </tbody>

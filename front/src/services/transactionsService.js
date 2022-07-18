@@ -14,9 +14,9 @@ const getTransactions = async()=>{
      }
 }
 //post transactions
-const postTransactions = async(Transactions)=>{
+const postTransactions = async(transaction)=>{
     try {
-        const responce = await axios.post(API_URL, Transactions);
+        const responce = await axios.post(API_URL, transaction);
         //console.log(responce);
         return(responce);
     } catch (error) {
@@ -24,9 +24,9 @@ const postTransactions = async(Transactions)=>{
     }
 }
 
-const transactionServices = {
+const transactionsService = {
     getTransactions,
     postTransactions
 }
 
-export default transactionServices
+export default transactionsService
