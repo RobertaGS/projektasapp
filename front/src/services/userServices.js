@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const API_URL = '/api/user';
-const API_URL_LOGIN = '/api/user/Login'
+const API_URL_LOGIN = '/api/user/login'
 
 
 //Log In - prisijungimas

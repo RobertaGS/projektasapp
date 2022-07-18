@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const user = require('../models/User');
 
 const asyncHandler = require('express-async-handler');
 
@@ -18,17 +18,17 @@ const registerUser = asyncHandler(async (req, res)=>{
         throw new Error('User already exists');
     }
     // create user !!!
-    const User = await User.create({
+    const User = await user.create({
         name,
         email,
         password
     });
     if(User){
         res.status(201).json({
-            _id: User.id,
-            name: User.name,
-            email: User.email,
-            password: User.password
+            _id: user.id,
+            name: user.name,
+            email: user.email,
+            password: user.password
         })
     } else {
         res.status(400);
@@ -36,12 +36,12 @@ const registerUser = asyncHandler(async (req, res)=>{
     }
 });
 // @desc Login a user
-// @route POST /api/users/login
+// @route POST /api/user/login
 // @access PUBLIC
 const loginUser = asyncHandler(async (req, res)=> {
     const { email, password } = req.body;
 
-    const user = await User.findOne({email});
+    const user = await user.findOne({email});
     //tikrinamas pagal token user&& compare password
     if(user) {
         res.json(
