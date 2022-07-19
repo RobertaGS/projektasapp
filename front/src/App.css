@@ -8,15 +8,21 @@ body{
     display:flex;
     flex-wrap: wrap;
     flex-direction:column;
-    background-color: rgb(185, 223, 212);
+    background-color: rgb(89, 167, 145);
 }
 
 .title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(18, 54, 84);
+    color: rgb(3, 34, 64);
 }
 
-h1 {
-    color:rgb(18, 54, 84);
+div > h1 {
+    color:rgb(3, 71, 60);
     font-weight: bold;
+
+}
+
+th {
+    color: rgb(3, 34, 64);
+    
 }

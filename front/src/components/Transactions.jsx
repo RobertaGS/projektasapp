@@ -23,7 +23,7 @@ console.log(transactions);
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Transaction</th>
+                            <th>Incomes And Expences</th>
                             <th>Amount</th>
                         </tr>     
                     </thead>
